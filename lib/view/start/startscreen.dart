@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Createaccount/createacc_email.dart';
 import '../navigation/Naviagation bar.dart';
+
 
 class StartView extends StatelessWidget {
   const StartView({super.key});
@@ -52,7 +54,9 @@ class StartView extends StatelessWidget {
                 child: ElevatedButton.icon(
                   style: ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(Colors.green)),
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateAccountWithEmail()));
+                    
+                  },
                   label: Text(
                     "Sign up free",
                     style: TextStyle(fontSize: 18, color: Colors.white),

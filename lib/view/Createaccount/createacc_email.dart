@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'create_password.dart';
+
 class CreateAccountWithEmail extends StatelessWidget {
   const CreateAccountWithEmail({super.key});
 
@@ -41,7 +43,8 @@ class CreateAccountWithEmail extends StatelessWidget {
                     style: ButtonStyle(
                         backgroundColor:
                         MaterialStatePropertyAll(Colors.grey[800])),
-                    onPressed: () {},
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Createpassword()));
+                    },
                     child: Text(
                       "Next",
                       style: TextStyle(

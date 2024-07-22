@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'gender_page.dart';
+
 class Createpassword extends StatelessWidget {
   const Createpassword({super.key});
 
@@ -41,7 +43,7 @@ class Createpassword extends StatelessWidget {
                     style: ButtonStyle(
                         backgroundColor:
                         MaterialStatePropertyAll(Colors.grey[800])),
-                    onPressed: () {},
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Genderpage()));},
                     child: Text(
                       "Next",
                       style: TextStyle(

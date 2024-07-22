@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../chooseartist/chooseartist.dart';
+
 class Namepage extends StatelessWidget {
   const Namepage({super.key});
 
@@ -134,8 +136,8 @@ class Namepage extends StatelessWidget {
                   child: ElevatedButton(
                       style: ButtonStyle(
                           backgroundColor:
-                              MaterialStatePropertyAll(Colors.white)),
-                      onPressed: () {},
+                              WidgetStatePropertyAll(Colors.white)),
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectArtist()));},
                       child: Text(
                         "Create an account",
                         style: TextStyle(

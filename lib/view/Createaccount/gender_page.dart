@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'name_page.dart';
+
 class Genderpage extends StatelessWidget {
   const Genderpage({super.key});
 
@@ -36,8 +38,8 @@ class Genderpage extends StatelessWidget {
                 child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                        MaterialStatePropertyAll(Colors.grey[800])),
-                    onPressed: () {},
+                        WidgetStatePropertyAll(Colors.grey[800])),
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Namepage()));},
                     child: Text(
                       "Next",
                       style: TextStyle(
