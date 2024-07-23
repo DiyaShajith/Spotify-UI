@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/pickers/image%20picker.dart';
 import 'package:spotify/view/Createaccount/create_password.dart';
 import 'package:spotify/view/Createaccount/createacc_email.dart';
 import 'package:spotify/view/Createaccount/gender_page.dart';
@@ -24,7 +25,9 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: StartView(),
+
+      home: ImagePickerScreen(),
+      //home: StartView(),
     );
   }
 }

@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class Searchview extends StatelessWidget {
   const Searchview({super.key});
@@ -71,7 +73,9 @@ class Searchview extends StatelessWidget {
                     fontSize: 20),
               ),
               SizedBox(
-                width: 150,
+                height: 15,
+              ),
+              SizedBox(
                 height: 300,
                 child: ListView.separated(
                   separatorBuilder: (context, index) => SizedBox(
@@ -82,13 +86,41 @@ class Searchview extends StatelessWidget {
                   itemBuilder: (context, index) => Container(
                     width: 150,
                     height: 300,
+                    padding: EdgeInsets.all(8),
+                    alignment: Alignment.bottomLeft,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      image: DecorationImage(
+                          image: NetworkImage(
+                            "https://i.giphy.com/oSN9DkmyExSe702xpa.webp",
+                          ),
+                          fit: BoxFit.fitHeight),
+                    ),
+                    child: Text(
+                      "#bollywood",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Expanded(
+                child: GridView.builder(itemCount: 8,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      mainAxisExtent: 100),
+                  itemBuilder: (context, index) => Container(
+                    padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
                             image: NetworkImage(
-                              "https://j.gifs.com/VOnrEO.gif",
-                            ),
-                            fit: BoxFit.cover)),
+                                "https://cdn.discordapp.com/attachments/1250729944569348148/1265156184856465458/searchCard.png?ex=66a07c03&is=669f2a83&hm=a326793b288898ca727c8f154b9c350f0b513e316347000efc0916afa22c4fe1&"))),
                   ),
                 ),
               )
